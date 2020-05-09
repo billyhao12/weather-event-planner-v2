@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
   <script src="jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -27,8 +28,8 @@
     </div>
   </section>
   <section class="section main">
-    <div class="container">
-      <input class="input" type="text" placeholder="Enter a city..." >
+    <div class="container" id="search-box">
+      <input id="search-input" class="input" type="text" placeholder="Enter a city..." >
       <button class="button" id="searchBtn"><i class="fa fa-search"></i></button>
     </div>
   </section>
@@ -39,10 +40,10 @@
         Current weather conditions
       </h2>
       <ul>
-        <li id="temp"><strong>Temperature:</strong></li>
-        <li id="precip"><strong>Precipitation:</strong></li>
-        <li id="humid"><strong>Humidity:</strong></li>
-        <li id="wind"><strong>Wind:</strong></li>
+        <li><strong>Temperature: </strong><span id="temp"></span><span id="degree"></span></li>
+        <li><strong>Current Conditions: </strong><span id="precip"></span></span></li>
+        <li><strong>Humidity:</strong><span id="humid"></span><span id="percent"></span></li>
+        <li><strong>Wind:</strong><span id="wind"></span><span id="mph"></span></li>
       </ul>
     </div>
   </section>
@@ -53,10 +54,10 @@
         in your area
       </h2>
       <ul>
-        <li id="event-1"><strong>Event 1:</strong></li>
-        <li id="event-2"><strong>Event 2:</strong></li>
-        <li id="event-3"><strong>Event 3:</strong></li>
-        <li id="event-4"><strong>Event 4:</strong></li>
+        <li><strong>Event 1: </strong><span id="event-1"></span></li>
+        <li><strong>Event 2: </strong><span id="event-2"></span></li>
+        <li><strong>Event 3: </strong><span id="event-3"></span></li>
+        <li><strong>Event 4: </strong><span id="event-4"></span></li>
       </ul>
     </div>
   </section>
