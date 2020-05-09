@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Auth Form</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  </head>
-  <body>
-    <div class="clearfix">
-      <div class="card">
-        <h2>Sign Up</h2>
-        <form method="POST">
-          <div class="input-group">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="janedoe@mail.com" />
-          </div>
-          <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="supersecure123" />
-          </div>
-          <div id="msg"></div>
-          <button id="sign-up">Sign Up</button>
-        </form>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Event Locator</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <script src="jquery-3.4.1.min.js"></script>
+</head>
 
-      <div class="card">
-        <h2>Last Registered User:</h2>
-        <p><strong>Email:</strong> <span id="user-email"></span></p>
-        <p><strong>Password:</strong> <span id="user-password"></span></p>
+<body>
+  <section class="hero">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <h1 class="title">
+          Weather Event Locator
+        </h1>
+        <h2 class="subtitle">
+          Search your city to find local activities and events suitable for the current weather!
+        </h2>
       </div>
     </div>
-    <script src="Assets/script.js"></script>
-  </body>
+  </section>
+  <section class="section main">
+    <div class="container">
+      <input class="input" type="text" placeholder="Enter a city..." >
+      <button class="button" id="searchBtn"><i class="fa fa-search"></i></button>
+    </div>
+  </section>
+  <section class="section main" id="weather-results">
+    <div class="container">
+      <h1 class="title section-name" id="city-name">City Name</h1>
+      <h2 class="subtitle section-name">
+        Current weather conditions
+      </h2>
+      <ul>
+        <li id="temp"><strong>Temperature:</strong></li>
+        <li id="precip"><strong>Precipitation:</strong></li>
+        <li id="humid"><strong>Humidity:</strong></li>
+        <li id="wind"><strong>Wind:</strong></li>
+      </ul>
+    </div>
+  </section>
+  <section class="section main" id="-results">
+    <div class="container">
+      <h1 class="title section-name" id="city-name">Activities and Events</h1>
+      <h2 class="subtitle section-name">
+        in your area
+      </h2>
+      <ul>
+        <li id="event-1"><strong>Event 1:</strong></li>
+        <li id="event-2"><strong>Event 2:</strong></li>
+        <li id="event-3"><strong>Event 3:</strong></li>
+        <li id="event-4"><strong>Event 4:</strong></li>
+      </ul>
+    </div>
+  </section>
+  <footer></footer>
+
+  <script src="assets/script.js"></script>
+</body>
 </html>
