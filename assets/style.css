@@ -1,22 +1,23 @@
 body {
-    background-color: cornsilk;
+    background-image: url("https://www.thegarden.net.au/wp-content/uploads/revslider/demo-2/girl-placeholder.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .hero {
-    background-color: lightblue;
-    border-bottom: solid 10px lightgray;
+    background: rgba(133, 216, 248, 0.8);
 }
 
 .main {
-    background-color: lightblue;
-    border: solid 10px lightgray;
+    background: rgba(133, 216, 248, 0.8);
+    border-radius: 25px;
     margin: 3% 20%;
     padding: 1.5rem;
 }
 
 footer {
-    background-color: lightblue;
-    border-top: solid 10px lightgray;
+    background: rgba(133, 216, 248, 0.8);
     padding: 15px;
 }
 
@@ -25,7 +26,6 @@ footer {
 .input {
     padding: 10px;
     font-size: 17px;
-    border: 1px solid grey;
     border-radius: 15px;
     float: left;
     width: 77%;
@@ -38,7 +38,6 @@ footer {
     background: #2196F3;
     color: white;
     font-size: 17px;
-    border: 1px solid grey;
     border-radius: 15px;
     border-left: none;
     cursor: pointer;
