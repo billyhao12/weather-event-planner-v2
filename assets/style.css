@@ -1,0 +1,48 @@
+body {
+    background-color: cornsilk;
+}
+
+.hero {
+    background-color: lightblue;
+    border-bottom: solid 10px lightgray;
+}
+
+.main {
+    background-color: lightblue;
+    border: solid 10px lightgray;
+    margin: 3% 20%;
+    padding: 1.5rem;
+}
+
+footer {
+    background-color: lightblue;
+    border-top: solid 10px lightgray;
+    padding: 15px;
+}
+
+/* Search bar style */
+
+.input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    float: left;
+    width: 77%;
+    background: #f1f1f1;
+    margin-right: 5px;
+}
+#searchBtn {
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    border-left: none;
+    cursor: pointer;
+}
+#searchBtn:hover {
+    background: #0b7dda;
+}
