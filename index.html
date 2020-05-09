@@ -1,18 +1,36 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Auth Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="card">
+        <h2>Sign Up</h2>
+        <form method="POST">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="janedoe@mail.com" />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="supersecure123" />
+          </div>
+          <div id="msg"></div>
+          <button id="sign-up">Sign Up</button>
+        </form>
+      </div>
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-</head>
-
-<body>
-  <script src="js/scripts.js"></script>
-</body>
+      <div class="card">
+        <h2>Last Registered User:</h2>
+        <p><strong>Email:</strong> <span id="user-email"></span></p>
+        <p><strong>Password:</strong> <span id="user-password"></span></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
