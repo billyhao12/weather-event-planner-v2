@@ -7,7 +7,6 @@ $('#searchBtn').on('click',function(){
 
   var city = $('#search-input').val();
 
-  //console.log(city)
   
  fetchDataWeather(city);
  
@@ -27,7 +26,7 @@ $('#searchBtn').on('click',function(){
       var weatherQueryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city +
         '&appid=' + weatherApiKey
 
-        console.log(weatherQueryURL)
+
     
         $.ajax({
             url: weatherQueryURL,
@@ -67,8 +66,7 @@ $('#searchBtn').on('click',function(){
           
      function fetchDataID(city,weatherObject){
        
-      console.log('city object carry throug' + weatherObject)
-      console.log(weatherObject)
+  
       var eventsQueryURL = 'https://api.predicthq.com/v1/places/?q='+ city
     
             $.ajax({
@@ -84,16 +82,9 @@ $('#searchBtn').on('click',function(){
                 // We store all of the retrieved data inside of an object called "response"
                 .then(function(IDObject) {
           
-                  // Log the queryURL
-                  //console.log(eventsQueryURL);
-          
-                  // Log the resulting object
-                //  console.log(response.results[0].id);
-
-
-                
-                  var cityID = IDObject.results[0].id; 
-                 // console.log(cityID)
+                            
+                  //var cityID = IDObject.results[0].id; 
+              
 
               
 
@@ -106,7 +97,7 @@ $('#searchBtn').on('click',function(){
       function fetchDataEvents(IDObject, weatherObject){
 
           
-         //console.log('fetch data events' + response.results[0].id);
+      
          var cityID = IDObject.results[0].id
 
          var queryParams =$.param({
@@ -116,7 +107,7 @@ $('#searchBtn').on('click',function(){
 
 
       var eventsURL = 'https://api.predicthq.com/v1/events/?'+ queryParams;
-      console.log(eventsURL)
+ 
 
 
 
@@ -131,7 +122,7 @@ $('#searchBtn').on('click',function(){
         
           .then(function(eventsObject) {
 
-          console.log(eventsObject)  
+        
           console.log(eventsObject.results[0].labels);
           weatherFilter(eventsObject, weatherObject)
                               
@@ -153,6 +144,30 @@ $('#searchBtn').on('click',function(){
 
 
      if ( weatherCondition === 'Rain'){
+
+   
+
+      for(var i = 0; i < eventsObject.results.length; i ++){
+
+        console.log(i)
+
+          // Need to loop through an array within an array
+    /*    eventsObject.results[i].labels.array.forEach(element => {
+
+          console.log('Testing')
+          
+        });  */
+ 
+       /*  if (eventsObject.results[i].labels === "outdoor"){
+
+          console.log(i)
+        } */
+
+      }
+
+      console.log(eventsObject.results[0].labels);
+
+
 
       console.log('True');
 
