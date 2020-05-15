@@ -97,65 +97,45 @@ function weatherFilter(eventsObject, weatherObject) {
 if(weatherCondition === "Clouds" || weatherCondition === 'rain'){
   console.log('True')
 
-  var items = 'concert'
+  var items = ['concert', 'outdoor']
 }
 
 else {
-
-    var items = 'outdoor'
-/*   var items = [
-    {
-      labels: ['performing-arts']
-  
-    },
-    {
-      labels:['sports']
-  
-    }
-  ] */
+    //var items = 'outdoor'
+   var items = ['performing-arts', 'sports', 'holiday']
+   
  
 }
 
 
  function validateItem(item) {
   console.log(item);
-  return item.labels.indexOf(items) > -1;;
+
+
+  for(var i = 0; i < items.length; i++){
+
+    if( item.labels.indexOf(items[i]) > -1)
+    return true;
+  }
+  
+  
  
 }
 
-function displayItem(item){
-  console.log('display item')
-  console.log(item)
-}
+function displayItem(item,i){
+  console.log(i)
+
+  $('#event-'+(i+1)).text(item.title);
+  console.log(item.title);
+  console.log($('#event-1'))
+  
+
+} 
 
 console.log(eventsArray.filter(validateItem))
 
-items.filter( validateItem ).forEach( displayItem );
+eventsArray.filter( validateItem ).forEach(displayItem,);
 
-
-
-/* function myFunction() {
-  document.getElementById("demo").innerHTML = ages.filter(checkAdult);
-}   */
-
-/*   if (weatherCondition === "Clouds") {
-    for (var i = 0; i < eventsObject.results.length; i++) {
-      console.log(eventsObject.results[i].labels);
-
-      eventsObject.results[i].labels.forEach((element) => {
-        //   console.log(element, 'element');
-        elementsArray.push(element);
-      });
-
-      if (eventsObject.results[i].labels === "outdoor") {
-        console.log('match');
-      }
-    }
-
-    console.log("True");
-  } else {
-    console.log("False");
-  } */
 
 
 }
