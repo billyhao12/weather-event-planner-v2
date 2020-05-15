@@ -1,8 +1,13 @@
 body {
-    background-image: url("https://www.thegarden.net.au/wp-content/uploads/revslider/demo-2/girl-placeholder.gif");
+    background-image: url("hot-air-balloons.jpg");
+    background-color: skyblue;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+}
+
+.title, .subtitle, strong {
+    color: black;
 }
 
 .hero {
