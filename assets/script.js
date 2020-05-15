@@ -1,21 +1,22 @@
 
 //var city = 'Seattle'
 
+var elementsArray = []
+console.log(elementsArray)
+
 $('#searchBtn').on('click',function(){
   //alert('testing')
   
 
   var city = $('#search-input').val();
+  
 
   
  fetchDataWeather(city);
  
 })
 
-
-
-   
-
+  
     
     function fetchDataWeather(city){
 
@@ -143,29 +144,32 @@ $('#searchBtn').on('click',function(){
     
 
 
-     if ( weatherCondition === 'Rain'){
+     if ( weatherCondition === 'Clouds'){
 
    
 
       for(var i = 0; i < eventsObject.results.length; i ++){
 
-        console.log(i)
 
-          // Need to loop through an array within an array
-    /*    eventsObject.results[i].labels.array.forEach(element => {
+        console.log(eventsObject.results[i].labels);
 
-          console.log('Testing')
+        eventsObject.results[i].labels.forEach(element => {
           
-        });  */
- 
-       /*  if (eventsObject.results[i].labels === "outdoor"){
+       //   console.log(element, 'element');
+       elementsArray.push(element)
+         
+
+
+        });
+
+      
+   
+       if  (eventsObject.results[i].labels === "outdoor"){
 
           console.log(i)
-        } */
+        } 
 
       }
-
-      console.log(eventsObject.results[0].labels);
 
 
 
