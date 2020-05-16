@@ -6,7 +6,7 @@ body {
     background-position: center;
 }
 
-.title, .subtitle, strong {
+.title, .subtitle, strong, span {
     color: black;
 }
 
