@@ -16,7 +16,7 @@ Plan events based on the current weather conditions.
 
 Type a city name in the search bar to get current weather conditions and events happening in your area.
 
-![Screenshot of Application](Weather-Event-Planner-screenshot.png)
+![Screenshot of Application](assets/Weather-Event-Planner-screenshot.png)
 
 ## Credits
 
