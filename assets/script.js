@@ -8,7 +8,7 @@ $("#searchBtn").on("click", function () {
 });
 
 function fetchDataWeather(city) {
-  var weatherApiKey = "7bb104f282f38f6d6a105af6428f8f9f";
+  var weatherApiKey = "08380159329a3e38fda792a63e0fc216";
 
   var weatherQueryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -46,7 +46,7 @@ function fetchDataID(city, weatherObject) {
       url: eventsQueryURL,
       method: "GET",
       headers: {
-        Authorization: "Bearer DeAzZ4-slL-IUgkFYreNMEuGaO3s4v-qraw1Ewx8",
+        Authorization: "Bearer s1tCgPCTeVnJSaoCrsYbjgRkRl7WUUKyufiJvFV5",
       },
     })
 
@@ -69,7 +69,7 @@ function fetchDataEvents(IDObject, weatherObject) {
       url: eventsURL,
       method: "GET",
       headers: {
-        Authorization: "Bearer DeAzZ4-slL-IUgkFYreNMEuGaO3s4v-qraw1Ewx8",
+        Authorization: "Bearer gc-FQ9BvRomz-HE74skJsAHWxexltw1LFkHvFWEx",
       },
     })
     .then(function (eventsObject) {
@@ -84,14 +84,10 @@ function weatherFilter(eventsObject, weatherObject) {
 
   var eventsArray = eventsObject.results
 
-
-  if (weatherCondition === "Clouds" || weatherCondition === 'rain') {
-
-    var items = ['concert', 'outdoor']
+  if (weatherCondition === "Clouds" || weatherCondition === "Rain") {
+    var items = ["performing-arts", "conference", "gaming", "movie", "esports", "club", "concert"];
   } else {
-    var items = ['performing-arts', 'sports', 'holiday']
-
-
+    var items = ["outdoor", "mlb", "horse-racing", "golf", "bicycle", "concert"];
   }
 
 
