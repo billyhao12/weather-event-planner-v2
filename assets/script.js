@@ -1,7 +1,6 @@
-var elementsArray = [];
+$("#search-box").submit(function(e) {
 
-$("#searchBtn").on("click", function () {
-
+  e.preventDefault();
   var city = $("#search-input").val();
 
   fetchDataWeather(city);
