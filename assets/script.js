@@ -33,7 +33,7 @@ function displayWeather(weatherObject) {
 
   $("#city-name").text(weatherObject.name);
   $("#temp").text(tempF + " °F");
-  $("#precip").text(weatherObject.weather[0].description);
+  $("#precip").text(weatherObject.weather[0].main);
   $("#humid").text(weatherObject.main.humidity + "%");
   $("#wind").text(weatherObject.wind.speed + " mph");
 }
@@ -82,10 +82,10 @@ function weatherFilter(eventsObject, weatherObject) {
 
   var eventsArray = eventsObject.results;
 
-  if (weatherCondition === "Clouds" || weatherCondition === "Rain") {
+  if (weatherCondition === "Clouds" || weatherCondition === "Rain" || weatherCondition === "Thunderstorm" || weatherCondition === "Drizzle" || weatherCondition === "Snow") {
     var items = ["performing-arts", "conference", "gaming", "movie", "esports", "club", "concert"];
   } else {
-    var items = ["outdoor", "mlb", "horse-racing", "golf", "bicycle", "concert"];
+    var items = ["outdoor", "mlb", "baseball", "horse-racing", "golf", "bicycle", "concert"];
   }
 
   function validateItem(item) {
