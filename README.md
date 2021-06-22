@@ -1,6 +1,6 @@
 # Weather Event Planner
 
-Deployed Application: https://billyhao12.github.io/Weather-Event-Planner/
+Deployed Application: https://billyhao12.github.io/weather-event-planner-v2/
 
 ## Description
 
