@@ -78,10 +78,9 @@ function fetchDataEvents(IDObject, weatherObject) {
 
 function weatherFilter(eventsObject, weatherObject) {
 
-
   var weatherCondition = weatherObject.weather[0].main;
 
-  var eventsArray = eventsObject.results
+  var eventsArray = eventsObject.results;
 
   if (weatherCondition === "Clouds" || weatherCondition === "Rain") {
     var items = ["performing-arts", "conference", "gaming", "movie", "esports", "club", "concert"];
@@ -89,9 +88,7 @@ function weatherFilter(eventsObject, weatherObject) {
     var items = ["outdoor", "mlb", "horse-racing", "golf", "bicycle", "concert"];
   }
 
-
   function validateItem(item) {
-
 
     for (var i = 0; i < items.length; i++) {
 
@@ -107,6 +104,13 @@ function weatherFilter(eventsObject, weatherObject) {
 
   }
 
-  eventsArray.filter(validateItem).forEach(displayItem);
+  var filteredEvents = eventsArray.filter(validateItem);
+
+  var numberOfEventsDisplayed = $("#events").children().length;
+  for (let i = 0; i < numberOfEventsDisplayed; i++) {
+    $("#event-" + (i + 1)).empty();
+  }
+
+  filteredEvents.forEach(displayItem);
 
 }
